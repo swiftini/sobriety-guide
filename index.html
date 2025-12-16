@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The First 30 Days — A Sobriety Survival Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-light: #fafaf9;
+      --bg-card: #ffffff;
+      --accent: #16a34a;
+      --accent-light: #22c55e;
+      --accent-bg: #f0fdf4;
+      --text-primary: #1c1917;
+      --text-secondary: #57534e;
+      --text-muted: #a8a29e;
+      --border: #e7e5e4;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    .content {
+      order: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      background: var(--accent-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .eyebrow {
+        justify-content: center;
+      }
+    }
+
+    h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    @media (max-width: 768px) {
+      .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      color: var(--text-primary);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+    }
+
+    .form-group input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: var(--accent);
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--accent-light);
+      transform: translateY(-1px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .privacy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .feature svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .image-side {
+      order: 2;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .image-side {
+        order: 0;
+      }
+    }
+
+    .image-wrapper {
+      position: relative;
+    }
+
+    .profile-image {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 1rem;
+      position: relative;
+      z-index: 1;
+      display: block;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      .profile-image {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+
+    .credential {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 0.75rem 1.25rem;
+      border-radius: 2rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      z-index: 2;
+      text-align: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .credential-name {
+      display: block;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.125rem;
+    }
+
+    .credential strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Success state */
+    .form-card.success {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .success-icon {
+      width: 4rem;
+      height: 4rem;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .success-icon svg {
+      width: 2rem;
+      height: 2rem;
+      color: white;
+    }
+
+    .success h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .success p {
+      color: var(--text-secondary);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-link {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      cursor: pointer;
+      text-decoration: underline;
+      font-family: inherit;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover {
+      color: var(--accent);
+    }
+
+    .footer-divider {
+      color: var(--text-muted);
+      margin: 0 0.75rem;
+    }
+
+    .footer-disclaimer {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-disclaimer p {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .footer-copyright p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      z-index: 1;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-content h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .modal-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-content p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-content ul {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-content li {
+      margin-bottom: 0.25rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.25rem;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover {
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="content">
+        <div class="eyebrow">Free Guide</div>
+        <h1>The First 30 Days Are <em>the Hardest</em></h1>
+        <p class="subtitle">Get my survival guide — what to expect, what to do when cravings hit, and the daily checklist that kept me sober since 2004.</p>
+        
+        <div class="form-card" id="formCard">
+          <form id="leadForm">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <button type="submit" class="btn">Send Me the Guide</button>
+          </form>
+          <p class="privacy">No spam. Unsubscribe anytime.</p>
+        </div>
+
+        <div class="form-card success hidden" id="successCard">
+          <div class="success-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div class="success">
+            <h3>Check Your Inbox</h3>
+            <p>Your guide is on the way. You've got this.</p>
+          </div>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Day-by-day timeline</span>
+          </div>
+          <div class="feature">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Craving protocol</span>
+          </div>
+          <div class="feature">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Daily checklist</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-side">
+        <div class="image-wrapper">
+          <img src="public/leif.jpg" alt="Leif Holtzman" class="profile-image">
+          <div class="credential"><span class="credential-name">Leif Holtzman</span>Sober since <strong>2004</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // PLACEHOLDER: Replace with Kit API integration
+    const form = document.getElementById('leadForm');
+    const formCard = document.getElementById('formCard');
+    const successCard = document.getElementById('successCard');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const firstName = document.getElementById('firstName').value;
+      const email = document.getElementById('email').value;
+
+      // TODO: Replace this with actual Kit API call
+      console.log('Lead captured:', { firstName, email });
+      
+      // Redirect to thank you page
+      window.location.href = 'thank-you.html';
+    });
+
+    // Modal functionality
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach(modal => {
+          modal.style.display = 'none';
+        });
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <button onclick="openModal('privacyModal')" class="footer-link">Privacy Policy</button>
+        <span class="footer-divider">•</span>
+        <button onclick="openModal('termsModal')" class="footer-link">Terms of Use</button>
+      </div>
+      <div class="footer-disclaimer">
+        <p>This site is not a part of the Facebook website, Meta Inc, Instagram, TikTok, ByteDance, YouTube, or Google LLC. Additionally, this site is NOT endorsed by Facebook, Meta, Instagram, TikTok, YouTube, or Google in any way. FACEBOOK is a trademark of META, Inc. INSTAGRAM is a trademark of META, Inc. TIKTOK is a trademark of ByteDance Ltd. YOUTUBE is a trademark of Google LLC.</p>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2024 Leif Holtzman. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal hidden" style="display: none;">
+    <div class="modal-overlay" onclick="closeModal('privacyModal')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('privacyModal')">×</button>
+      <h2>Privacy Policy</h2>
+      <p><strong>Last Updated:</strong> December 2024</p>
+      
+      <h3>Information We Collect</h3>
+      <p>When you opt in to receive our free guide, we collect your first name and email address. This information is provided voluntarily by you through our opt-in form.</p>
+      
+      <h3>How We Use Your Information</h3>
+      <p>We use your information to:</p>
+      <ul>
+        <li>Deliver the free guide you requested</li>
+        <li>Send you relevant emails about sobriety resources, tips, and offers</li>
+        <li>Improve our content and services</li>
+      </ul>
+      
+      <h3>Email Communications</h3>
+      <p>By providing your email address, you consent to receive emails from us. Every email includes an unsubscribe link. You can opt out at any time by clicking "unsubscribe" at the bottom of any email.</p>
+      
+      <h3>Third-Party Services</h3>
+      <p>We use third-party email service providers (such as Kit/ConvertKit) to manage our email list and deliver emails. These providers have their own privacy policies governing how they handle your data.</p>
+      
+      <h3>Data Security</h3>
+      <p>We implement reasonable security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.</p>
+      
+      <h3>Your Rights</h3>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access the personal information we hold about you</li>
+        <li>Request correction of inaccurate information</li>
+        <li>Request deletion of your information</li>
+        <li>Unsubscribe from our email list at any time</li>
+      </ul>
+      
+      <h3>Cookies</h3>
+      <p>This website may use cookies and similar tracking technologies to improve your experience. You can control cookie settings through your browser.</p>
+      
+      <h3>Contact</h3>
+      <p>For questions about this privacy policy, please contact us at the email address provided in our communications.</p>
+    </div>
+  </div>
+
+  <!-- Terms of Use Modal -->
+  <div id="termsModal" class="modal hidden" style="display: none;">
+    <div class="modal-overlay" onclick="closeModal('termsModal')"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('termsModal')">×</button>
+      <h2>Terms of Use</h2>
+      <p><strong>Last Updated:</strong> December 2024</p>
+      
+      <h3>Acceptance of Terms</h3>
+      <p>By accessing this website and opting in to receive our content, you agree to be bound by these Terms of Use.</p>
+      
+      <h3>Educational Purpose Only</h3>
+      <p>The content provided on this website and through our emails is for educational and informational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment.</p>
+      
+      <h3>Not Medical Advice</h3>
+      <p>The information shared is based on personal experience and should not be considered medical or clinical advice. Always seek the advice of your physician, therapist, or other qualified health provider with any questions you may have regarding a medical condition or mental health concern.</p>
+      
+      <h3>No Guarantees</h3>
+      <p>Results vary from person to person. We make no guarantees regarding the effectiveness of any strategies, tips, or information shared. Recovery is a personal journey and what works for one person may not work for another.</p>
+      
+      <h3>Emergency Situations</h3>
+      <p>If you are experiencing a medical emergency, mental health crisis, or thoughts of self-harm, please contact emergency services (911), go to your nearest emergency room, or call the National Suicide Prevention Lifeline at 988.</p>
+      
+      <h3>Intellectual Property</h3>
+      <p>All content on this website, including text, graphics, logos, and downloadable materials, is the property of Leif Holtzman and is protected by copyright laws. You may not reproduce, distribute, or create derivative works without express written permission.</p>
+      
+      <h3>User Conduct</h3>
+      <p>You agree not to misuse our content, attempt to gain unauthorized access to our systems, or use our materials for any unlawful purpose.</p>
+      
+      <h3>Limitation of Liability</h3>
+      <p>To the fullest extent permitted by law, Leif Holtzman shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use this website or its content.</p>
+      
+      <h3>Changes to Terms</h3>
+      <p>We reserve the right to modify these terms at any time. Continued use of the website after changes constitutes acceptance of the new terms.</p>
+      
+      <h3>Contact</h3>
+      <p>For questions about these terms, please contact us at the email address provided in our communications.</p>
+    </div>
+  </div>
+</body>
+</html>
