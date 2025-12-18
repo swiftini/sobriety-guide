@@ -507,10 +507,10 @@
   </div>
 
   <script>
-    // PLACEHOLDER: Replace with Kit API integration
     const form = document.getElementById('leadForm');
     const formCard = document.getElementById('formCard');
     const successCard = document.getElementById('successCard');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -518,11 +518,31 @@
       const firstName = document.getElementById('firstName').value;
       const email = document.getElementById('email').value;
 
-      // TODO: Replace this with actual Kit API call
-      console.log('Lead captured:', { firstName, email });
-      
-      // Redirect to thank you page
-      window.location.href = 'thank-you.html';
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, firstName }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Subscription failed');
+        }
+
+        // Redirect to thank you page on success
+        window.location.href = 'thank-you.html';
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Me the Guide';
+      }
     });
 
     // Modal functionality
