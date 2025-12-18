@@ -37,11 +37,22 @@ export default async function handler(req, res) {
 
         const data = await response.json();
 
+        // Log the full response for debugging
+        console.log('Kit API response status:', response.status);
+        console.log('Kit API response data:', JSON.stringify(data, null, 2));
+
         if (!response.ok) {
             console.error('Kit API error:', data);
-            return res.status(response.status).json({ error: 'Failed to subscribe' });
+            return res.status(response.status).json({ error: 'Failed to subscribe', details: data });
         }
 
+        // Check if subscription was actually created
+        if (!data.subscription) {
+            console.error('No subscription in response:', data);
+            return res.status(400).json({ error: 'Subscription not created', details: data });
+        }
+
+        console.log('Subscriber added successfully:', data.subscription.subscriber.email_address);
         return res.status(200).json({ success: true, subscription: data.subscription });
     } catch (error) {
         console.error('Subscription error:', error);
