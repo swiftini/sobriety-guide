@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <style>
@@ -7,11 +8,11 @@
       size: A4;
       margin: 2cm;
     }
-    
+
     * {
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: 'Georgia', serif;
       font-size: 11pt;
@@ -22,7 +23,7 @@
       padding: 20px;
       background: #fff;
     }
-    
+
     h1 {
       font-size: 28pt;
       font-weight: bold;
@@ -31,11 +32,11 @@
       color: #1a1a1a;
       page-break-before: always;
     }
-    
+
     h1:first-of-type {
       page-break-before: avoid;
     }
-    
+
     h2 {
       font-size: 18pt;
       font-weight: bold;
@@ -45,7 +46,7 @@
       border-bottom: 2px solid #2c5530;
       padding-bottom: 5px;
     }
-    
+
     h3 {
       font-size: 14pt;
       font-weight: bold;
@@ -53,7 +54,7 @@
       margin-bottom: 10px;
       color: #1a1a1a;
     }
-    
+
     h4 {
       font-size: 12pt;
       font-weight: bold;
@@ -61,12 +62,12 @@
       margin-bottom: 8px;
       color: #444;
     }
-    
+
     p {
       margin-bottom: 12px;
       text-align: left;
     }
-    
+
     .cover {
       height: 100vh;
       display: flex;
@@ -76,35 +77,35 @@
       text-align: center;
       page-break-after: always;
     }
-    
+
     .cover h1 {
       font-size: 42pt;
       margin-bottom: 10px;
       page-break-before: avoid;
     }
-    
+
     .cover .subtitle {
       font-size: 18pt;
       color: #2c5530;
       margin-bottom: 60px;
       font-style: italic;
     }
-    
+
     .cover .author {
       font-size: 14pt;
       margin-top: 40px;
     }
-    
+
     .cover .tagline {
       font-size: 12pt;
       color: #666;
       font-style: italic;
     }
-    
+
     .section {
       page-break-inside: avoid;
     }
-    
+
     .callout {
       background: #f5f9f5;
       border-left: 4px solid #2c5530;
@@ -112,70 +113,70 @@
       margin: 20px 0;
       font-style: italic;
     }
-    
+
     .warning {
       background: #fff5f5;
       border-left: 4px solid #c53030;
       padding: 15px 20px;
       margin: 20px 0;
     }
-    
+
     .checklist {
       list-style: none;
       padding-left: 0;
     }
-    
+
     .checklist li {
       position: relative;
       padding-left: 30px;
       margin-bottom: 12px;
     }
-    
+
     .checklist li:before {
       content: "☐";
       position: absolute;
       left: 0;
       font-size: 14pt;
     }
-    
+
     ul {
       padding-left: 25px;
     }
-    
+
     li {
       margin-bottom: 8px;
     }
-    
+
     .timeline-phase {
       background: #f9f9f9;
       padding: 20px;
       margin: 20px 0;
       border-radius: 5px;
     }
-    
+
     .timeline-phase h3 {
       color: #2c5530;
       margin-top: 0;
     }
-    
+
     .exercise {
       border: 2px solid #2c5530;
       padding: 20px;
       margin: 25px 0;
       background: #fafafa;
     }
-    
+
     .exercise h3 {
       margin-top: 0;
       color: #2c5530;
     }
-    
+
     .write-line {
       border-bottom: 1px solid #ccc;
       height: 30px;
       margin: 10px 0;
     }
-    
+
     .script {
       background: #f0f0f0;
       padding: 15px;
@@ -183,11 +184,11 @@
       border-radius: 5px;
       font-style: italic;
     }
-    
+
     .page-break {
       page-break-before: always;
     }
-    
+
     .footer {
       text-align: center;
       margin-top: 50px;
@@ -196,489 +197,523 @@
       font-size: 10pt;
       color: #666;
     }
-    
+
     .toc {
       page-break-after: always;
     }
-    
+
     .toc h2 {
       text-align: center;
       border: none;
     }
-    
+
     .toc ul {
       list-style: none;
       padding: 0;
     }
-    
+
     .toc li {
       padding: 8px 0;
       border-bottom: 1px dotted #ccc;
     }
-    
+
     .emergency-box {
       border: 3px solid #c53030;
       padding: 20px;
       margin: 25px 0;
       background: #fff;
     }
-    
+
     .emergency-box h3 {
       color: #c53030;
       margin-top: 0;
     }
-    
+
     @media print {
       body {
         padding: 0;
       }
-      
+
       .no-print {
         display: none;
       }
     }
   </style>
 </head>
+
 <body>
 
-<div class="cover">
-  <h1>THE FIRST 30 DAYS</h1>
-  <div class="subtitle">A Sobriety Survival Guide</div>
-  <div class="author"><strong>By Leif Holtzman</strong></div>
-  <div class="tagline">Sober Since 2004</div>
-</div>
-
-<div class="toc">
-  <h2>What's Inside</h2>
-  <ul>
-    <li>Important Disclaimer</li>
-    <li>Welcome</li>
-    <li>What To Expect: The Timeline</li>
-    <li>The Daily Checklist</li>
-    <li>When Cravings Hit: Emergency Protocol</li>
-    <li>The "Why" Exercise</li>
-    <li>Your Environment Checklist</li>
-    <li>Who To Tell (And How)</li>
-    <li>Social Situations: The Cheat Sheet</li>
-    <li>Resources</li>
-    <li>Letter To Your Future Self</li>
-    <li>Day 30: What's Next</li>
-  </ul>
-</div>
-
-<div class="warning" style="margin-top: 40px; page-break-after: always;">
-  <h2 style="color: #c53030; border: none; margin-top: 0;">Important Disclaimer</h2>
-  
-  <p><strong>I am not a doctor, medical professional, or licensed addiction counselor.</strong> This guide is based solely on my personal experience and is intended for informational and motivational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment.</p>
-  
-  <p><strong>Before you quit drinking or using drugs, please consult a medical professional</strong> — especially if you have been using heavily or for an extended period. Withdrawal from certain substances can be life-threatening.</p>
-  
-  <h4 style="color: #c53030;">Withdrawal from these substances can be medically dangerous:</h4>
-  <ul>
-    <li><strong>Alcohol</strong> — Severe withdrawal can cause seizures, delirium tremens (DTs), and death. If you've been drinking heavily for weeks, months, or years, medical supervision is strongly recommended.</li>
-    <li><strong>Benzodiazepines</strong> (Xanax, Valium, Klonopin, Ativan) — Withdrawal can cause seizures and other life-threatening complications. Never stop cold turkey without medical guidance.</li>
-    <li><strong>Opioids</strong> (heroin, fentanyl, oxycodone, etc.) — While rarely fatal on its own, withdrawal is extremely uncomfortable and relapse risk is high. Medical support significantly improves outcomes.</li>
-    <li><strong>Barbiturates</strong> — Similar to benzodiazepines, withdrawal can be fatal.</li>
-  </ul>
-  
-  <p><strong>Please seek medical help if you experience:</strong> severe tremors, hallucinations, seizures, extreme confusion, fever, rapid heartbeat, severe vomiting, or any symptoms that feel dangerous.</p>
-  
-  <p>This guide can support your journey, but your safety comes first. When in doubt, see a doctor.</p>
-</div>
-
-<h1>Welcome</h1>
-
-<p>If you're reading this, you've already done the hardest part: you decided to try.</p>
-
-<p>I'm not going to sugarcoat it. The first 30 days are brutal. They were for me. They are for everyone. But they're also survivable — and on the other side is a life you can't even imagine yet.</p>
-
-<p>I got sober in 2004. I've now lived more of my adult life sober than I ever did using. And I can tell you with absolute certainty: it's worth it. Every hard day, every craving, every awkward social situation — worth it.</p>
-
-<p>This guide is what I wish someone had given me on Day 1. It's not theory. It's not platitudes. It's the practical, day-by-day reality of what you're about to go through, and exactly what to do about it.</p>
-
-<p>Whether you're quitting alcohol, drugs, or both — the fundamentals are the same. The timeline may vary depending on your substance, but the emotional journey, the cravings, the rebuilding of your life — that's universal.</p>
-
-<div class="callout">
-  You don't have to figure this out alone. Let's go.
-</div>
-
-<h1>What To Expect: The Timeline</h1>
-
-<p>Your brain and body are about to go through a significant adjustment. Knowing what's coming makes it less scary. Here's the roadmap.</p>
-
-<p><em>Note: This timeline is general. Withdrawal symptoms and duration vary depending on your substance, usage patterns, and individual biology. When in doubt, consult a medical professional.</em></p>
-
-<div class="timeline-phase">
-  <h3>Days 1-3: The Storm</h3>
-  <p>This is the acute phase. Your body is realizing it's not getting what it's used to, and it's going to protest.</p>
-  
-  <h4>Physical symptoms you might experience:</h4>
-  <ul>
-    <li>Anxiety (sometimes severe)</li>
-    <li>Sweating, especially at night</li>
-    <li>Shaky hands</li>
-    <li>Rapid heartbeat</li>
-    <li>Nausea or upset stomach</li>
-    <li>Headaches</li>
-    <li>Insomnia or disrupted sleep</li>
-    <li>Muscle aches and pains (common with opioids)</li>
-    <li>Flu-like symptoms</li>
-  </ul>
-  
-  <h4>Emotional symptoms:</h4>
-  <ul>
-    <li>Irritability (everything annoys you)</li>
-    <li>Mood swings</li>
-    <li>Sadness or depression</li>
-    <li>Restlessness</li>
-    <li>Difficulty concentrating</li>
-    <li>Intense cravings</li>
-  </ul>
-</div>
-
-<div class="warning">
-  <strong>Seek medical help immediately if you experience:</strong>
-  <ul>
-    <li>Severe tremors or shaking</li>
-    <li>Hallucinations (seeing or hearing things)</li>
-    <li>Seizures</li>
-    <li>Extreme confusion</li>
-    <li>Fever</li>
-    <li>Chest pain or difficulty breathing</li>
-  </ul>
-  <p>Withdrawal from alcohol, benzodiazepines, and some other substances can be medically dangerous or fatal. Please see the disclaimer at the beginning of this guide and consult a doctor if you have any concerns.</p>
-</div>
-
-<h4>Survival strategy for Days 1-3:</h4>
-<ul>
-  <li>Clear your schedule if possible</li>
-  <li>Stay hydrated (water, electrolytes, more water)</li>
-  <li>Eat even if you're not hungry</li>
-  <li>Rest as much as you can</li>
-  <li>Don't make any big decisions</li>
-  <li>Take it hour by hour, not day by day</li>
-</ul>
-
-<div class="timeline-phase">
-  <h3>Days 4-7: The Fog</h3>
-  <p>The acute symptoms start to ease, but you're not out of the woods. Your brain is recalibrating.</p>
-  
-  <h4>What you'll experience:</h4>
-  <ul>
-    <li>Brain fog (trouble thinking clearly)</li>
-    <li>Fatigue that feels bone-deep</li>
-    <li>Sleep is improving but still disrupted</li>
-    <li>Cravings come in waves — intense, then gone</li>
-    <li>Emotional sensitivity (crying at commercials is normal)</li>
-    <li>Appetite returning (possibly with a vengeance)</li>
-  </ul>
-  
-  <h4>Survival strategy:</h4>
-  <ul>
-    <li>Gentle movement helps clear the fog</li>
-    <li>Don't expect too much of yourself mentally</li>
-    <li>Sugar/food cravings are normal — your body is recalibrating</li>
-    <li>Start establishing a simple routine</li>
-    <li>Celebrate making it a week — that's huge</li>
-  </ul>
-</div>
-
-<div class="timeline-phase">
-  <h3>Days 8-14: The Quiet</h3>
-  <p>The chaos calms down. You start to feel... better. This is both good and dangerous.</p>
-  
-  <h4>What you'll experience:</h4>
-  <ul>
-    <li>Energy starting to return</li>
-    <li>Sleep improving significantly</li>
-    <li>Thinking more clearly</li>
-    <li>Possibly experiencing the "pink cloud" — a euphoric feeling</li>
-    <li>The dangerous thought: "Maybe I wasn't that bad"</li>
-  </ul>
-  
-  <div class="callout">
-    <strong>The pink cloud warning:</strong> Some people feel amazing during this phase. Certain they've beaten this forever. Don't trust it completely. It can lead to overconfidence. The addiction is patient — it will wait for you to let your guard down.
+  <div class="cover">
+    <h1>THE FIRST 30 DAYS</h1>
+    <div class="subtitle">A Sobriety Survival Guide</div>
+    <div class="author"><strong>By Leif Holtzman</strong></div>
+    <div class="tagline">Sober Since 2004</div>
   </div>
-</div>
 
-<div class="timeline-phase">
-  <h3>Days 15-30: The Test</h3>
-  <p>This is where sobriety gets real. The crisis is over. Now you have to build a life.</p>
-  
-  <h4>What you'll experience:</h4>
+  <div class="toc">
+    <h2>What's Inside</h2>
+    <ul>
+      <li>Important Disclaimer</li>
+      <li>Welcome</li>
+      <li>What To Expect: The Timeline</li>
+      <li>The Daily Checklist</li>
+      <li>When Cravings Hit: Emergency Protocol</li>
+      <li>The "Why" Exercise</li>
+      <li>Your Environment Checklist</li>
+      <li>Who To Tell (And How)</li>
+      <li>Social Situations: The Cheat Sheet</li>
+      <li>Resources</li>
+      <li>Letter To Your Future Self</li>
+      <li>Day 30: What's Next</li>
+    </ul>
+  </div>
+
+  <div class="warning" style="margin-top: 40px; page-break-after: always;">
+    <h2 style="color: #c53030; border: none; margin-top: 0;">Important Disclaimer</h2>
+
+    <p><strong>I am not a doctor, medical professional, or licensed addiction counselor.</strong> This guide is based
+      solely on my personal experience and is intended for informational and motivational purposes only. It is not a
+      substitute for professional medical advice, diagnosis, or treatment.</p>
+
+    <p><strong>Before you quit drinking or using drugs, please consult a medical professional</strong> — especially if
+      you have been using heavily or for an extended period. Withdrawal from certain substances can be life-threatening.
+    </p>
+
+    <h4 style="color: #c53030;">Withdrawal from these substances can be medically dangerous:</h4>
+    <ul>
+      <li><strong>Alcohol</strong> — Severe withdrawal can cause seizures, delirium tremens (DTs), and death. If you've
+        been drinking heavily for weeks, months, or years, medical supervision is strongly recommended.</li>
+      <li><strong>Benzodiazepines</strong> (Xanax, Valium, Klonopin, Ativan) — Withdrawal can cause seizures and other
+        life-threatening complications. Never stop cold turkey without medical guidance.</li>
+      <li><strong>Opioids</strong> (heroin, fentanyl, oxycodone, etc.) — While rarely fatal on its own, withdrawal is
+        extremely uncomfortable and relapse risk is high. Medical support significantly improves outcomes.</li>
+      <li><strong>Barbiturates</strong> — Similar to benzodiazepines, withdrawal can be fatal.</li>
+    </ul>
+
+    <p><strong>Please seek medical help if you experience:</strong> severe tremors, hallucinations, seizures, extreme
+      confusion, fever, rapid heartbeat, severe vomiting, or any symptoms that feel dangerous.</p>
+
+    <p>This guide can support your journey, but your safety comes first. When in doubt, see a doctor.</p>
+  </div>
+
+  <h1>Welcome</h1>
+
+  <p>If you're reading this, you've already done the hardest part: you decided to try.</p>
+
+  <p>I'm not going to sugarcoat it. The first 30 days are brutal. They were for me. They are for everyone. But they're
+    also survivable — and on the other side is a life you can't even imagine yet.</p>
+
+  <p>I got sober in 2004. I've now lived more of my adult life sober than I ever did using. And I can tell you with
+    absolute certainty: it's worth it. Every hard day, every craving, every awkward social situation — worth it.</p>
+
+  <p>This guide is what I wish someone had given me on Day 1. It's not theory. It's not platitudes. It's the practical,
+    day-by-day reality of what you're about to go through, and exactly what to do about it.</p>
+
+  <p>Whether you're quitting alcohol, drugs, or both — the fundamentals are the same. The timeline may vary depending on
+    your substance, but the emotional journey, the cravings, the rebuilding of your life — that's universal.</p>
+
+  <div class="callout">
+    You don't have to figure this out alone. Let's go.
+  </div>
+
+  <h1>What To Expect: The Timeline</h1>
+
+  <p>Your brain and body are about to go through a significant adjustment. Knowing what's coming makes it less scary.
+    Here's the roadmap.</p>
+
+  <p><em>Note: This timeline is general. Withdrawal symptoms and duration vary depending on your substance, usage
+      patterns, and individual biology. When in doubt, consult a medical professional.</em></p>
+
+  <div class="timeline-phase">
+    <h3>Days 1-3: The Storm</h3>
+    <p>This is the acute phase. Your body is realizing it's not getting what it's used to, and it's going to protest.
+    </p>
+
+    <h4>Physical symptoms you might experience:</h4>
+    <ul>
+      <li>Anxiety (sometimes severe)</li>
+      <li>Sweating, especially at night</li>
+      <li>Shaky hands</li>
+      <li>Rapid heartbeat</li>
+      <li>Nausea or upset stomach</li>
+      <li>Headaches</li>
+      <li>Insomnia or disrupted sleep</li>
+      <li>Muscle aches and pains (common with opioids)</li>
+      <li>Flu-like symptoms</li>
+    </ul>
+
+    <h4>Emotional symptoms:</h4>
+    <ul>
+      <li>Irritability (everything annoys you)</li>
+      <li>Mood swings</li>
+      <li>Sadness or depression</li>
+      <li>Restlessness</li>
+      <li>Difficulty concentrating</li>
+      <li>Intense cravings</li>
+    </ul>
+  </div>
+
+  <div class="warning">
+    <strong>Seek medical help immediately if you experience:</strong>
+    <ul>
+      <li>Severe tremors or shaking</li>
+      <li>Hallucinations (seeing or hearing things)</li>
+      <li>Seizures</li>
+      <li>Extreme confusion</li>
+      <li>Fever</li>
+      <li>Chest pain or difficulty breathing</li>
+    </ul>
+    <p>Withdrawal from alcohol, benzodiazepines, and some other substances can be medically dangerous or fatal. Please
+      see the disclaimer at the beginning of this guide and consult a doctor if you have any concerns.</p>
+  </div>
+
+  <h4>Survival strategy for Days 1-3:</h4>
   <ul>
-    <li>Reality setting in — this is your life now</li>
-    <li>Boredom (you have so much time you used to spend drinking)</li>
-    <li>Social challenges emerge</li>
-    <li>The negotiating voice: "Maybe I could just drink on weekends"</li>
-    <li>Building new routines and patterns</li>
+    <li>Clear your schedule if possible</li>
+    <li>Stay hydrated (water, electrolytes, more water)</li>
+    <li>Eat even if you're not hungry</li>
+    <li>Rest as much as you can</li>
+    <li>Don't make any big decisions</li>
+    <li>Take it hour by hour, not day by day</li>
   </ul>
-</div>
 
-<h1 class="page-break">The Daily Checklist</h1>
+  <div class="timeline-phase">
+    <h3>Days 4-7: The Fog</h3>
+    <p>The acute symptoms start to ease, but you're not out of the woods. Your brain is recalibrating.</p>
 
-<p>Print this out. Put it on your fridge. Check it off every day.</p>
+    <h4>What you'll experience:</h4>
+    <ul>
+      <li>Brain fog (trouble thinking clearly)</li>
+      <li>Fatigue that feels bone-deep</li>
+      <li>Sleep is improving but still disrupted</li>
+      <li>Cravings come in waves — intense, then gone</li>
+      <li>Emotional sensitivity (crying at commercials is normal)</li>
+      <li>Appetite returning (possibly with a vengeance)</li>
+    </ul>
 
-<h3>Morning</h3>
-<ul class="checklist">
-  <li><strong>No phone for first 30 minutes</strong><br>Your nervous system is fragile. Don't shock it with news or social media first thing.</li>
-  <li><strong>Hydrate first</strong><br>Glass of water before anything else.</li>
-  <li><strong>Move your body</strong><br>Even 10 minutes. A walk. Some stretches.</li>
-  <li><strong>Say one thing you're grateful for</strong><br>Out loud. It sounds cheesy until you realize it works.</li>
-  <li><strong>Eat real food</strong><br>Protein. Something substantial. Not just coffee.</li>
-</ul>
+    <h4>Survival strategy:</h4>
+    <ul>
+      <li>Gentle movement helps clear the fog</li>
+      <li>Don't expect too much of yourself mentally</li>
+      <li>Sugar/food cravings are normal — your body is recalibrating</li>
+      <li>Start establishing a simple routine</li>
+      <li>Celebrate making it a week — that's huge</li>
+    </ul>
+  </div>
 
-<h3>Midday</h3>
-<ul class="checklist">
-  <li><strong>Check in with one person</strong><br>Text them. Call them. Just connect.</li>
-  <li><strong>Step away from screens</strong><br>Take a real break. Look at the sky.</li>
-  <li><strong>Notice your energy</strong><br>If you're crashing, rest.</li>
-</ul>
+  <div class="timeline-phase">
+    <h3>Days 8-14: The Quiet</h3>
+    <p>The chaos calms down. You start to feel... better. This is both good and dangerous.</p>
 
-<h3>Evening (The Danger Zone)</h3>
-<ul class="checklist">
-  <li><strong>Have a plan for 5-7pm</strong><br>This is when cravings hit hardest. Know exactly what you're doing.</li>
-  <li><strong>Eat dinner</strong><br>Hunger triggers cravings.</li>
-  <li><strong>No substances in the house</strong><br>If it's there, it's a loaded gun.</li>
-  <li><strong>Evening activity</strong><br>Something that occupies your hands and mind.</li>
-  <li><strong>Bed early</strong><br>Sleep is medicine right now.</li>
-</ul>
+    <h4>What you'll experience:</h4>
+    <ul>
+      <li>Energy starting to return</li>
+      <li>Sleep improving significantly</li>
+      <li>Thinking more clearly</li>
+      <li>Possibly experiencing the "pink cloud" — a euphoric feeling</li>
+      <li>The dangerous thought: "Maybe I wasn't that bad"</li>
+    </ul>
 
-<h3>Before Sleep</h3>
-<ul class="checklist">
-  <li><strong>Mark the day complete</strong><br>You did it. Another day.</li>
-  <li><strong>Acknowledge one thing you did right</strong><br>Focus on what you survived.</li>
-</ul>
+    <div class="callout">
+      <strong>The pink cloud warning:</strong> Some people feel amazing during this phase. Certain they've beaten this
+      forever. Don't trust it completely. It can lead to overconfidence. The addiction is patient — it will wait for you
+      to let your guard down.
+    </div>
+  </div>
 
-<h1 class="page-break">When Cravings Hit</h1>
+  <div class="timeline-phase">
+    <h3>Days 15-30: The Test</h3>
+    <p>This is where sobriety gets real. The crisis is over. Now you have to build a life.</p>
 
-<p>Cravings feel like they'll last forever. They don't. The average craving peaks at 15-20 minutes, then fades. Your only job is to get through those minutes.</p>
+    <h4>What you'll experience:</h4>
+    <ul>
+      <li>Reality setting in — this is your life now</li>
+      <li>Boredom (you have so much time you used to spend drinking)</li>
+      <li>Social challenges emerge</li>
+      <li>The negotiating voice: "Maybe I could just drink on weekends"</li>
+      <li>Building new routines and patterns</li>
+    </ul>
+  </div>
 
-<div class="emergency-box">
-  <h3>The 5-5-5 Method</h3>
-  <p><strong>5 Deep Breaths</strong><br>In for 4 counts. Hold for 4. Out for 6. Repeat 5 times.</p>
-  <p><strong>5 Things You Can See</strong><br>Name them out loud. "I see a lamp. I see my keys." This grounds you.</p>
-  <p><strong>5 Minutes</strong><br>Set a timer. Just get through 5 minutes. Then set it again if needed.</p>
-</div>
+  <h1 class="page-break">The Daily Checklist</h1>
 
-<h3>Physical Interrupts</h3>
-<ul>
-  <li><strong>Ice cube on your wrist or neck</strong> — cold interrupts the craving signal</li>
-  <li><strong>Cold water on your face</strong> — activates the dive reflex</li>
-  <li><strong>Walk around the block</strong> — change your environment</li>
-  <li><strong>Call someone</strong> — not text, actually hear a voice</li>
-  <li><strong>Eat something</strong> — cravings often mask hunger</li>
-</ul>
+  <p>Print this out. Put it on your fridge. Check it off every day.</p>
 
-<h3>Mental Interrupts</h3>
-<ul>
-  <li><strong>Play the tape forward</strong> — Imagine tomorrow's hangover. The shame. Play the whole movie.</li>
-  <li><strong>Read your "why" list</strong> — This is why you wrote it down.</li>
-  <li><strong>Watch a recovery video</strong> — Let someone else's voice drown out the craving.</li>
-</ul>
+  <h3>Morning</h3>
+  <ul class="checklist">
+    <li><strong>No phone for first 30 minutes</strong><br>Your nervous system is fragile. Don't shock it with news or
+      social media first thing.</li>
+    <li><strong>Hydrate first</strong><br>Glass of water before anything else.</li>
+    <li><strong>Move your body</strong><br>Even 10 minutes. A walk. Some stretches.</li>
+    <li><strong>Say one thing you're grateful for</strong><br>Out loud. It sounds cheesy until you realize it works.
+    </li>
+    <li><strong>Eat real food</strong><br>Protein. Something substantial. Not just coffee.</li>
+  </ul>
 
-<div class="callout">
-  <strong>The Craving Truth:</strong> This feeling will pass. It always does. No one has ever regretted waking up clean and sober.
-</div>
+  <h3>Midday</h3>
+  <ul class="checklist">
+    <li><strong>Check in with one person</strong><br>Text them. Call them. Just connect.</li>
+    <li><strong>Step away from screens</strong><br>Take a real break. Look at the sky.</li>
+    <li><strong>Notice your energy</strong><br>If you're crashing, rest.</li>
+  </ul>
 
-<h1 class="page-break">The "Why" Exercise</h1>
+  <h3>Evening (The Danger Zone)</h3>
+  <ul class="checklist">
+    <li><strong>Have a plan for 5-7pm</strong><br>This is when cravings hit hardest. Know exactly what you're doing.
+    </li>
+    <li><strong>Eat dinner</strong><br>Hunger triggers cravings.</li>
+    <li><strong>No substances in the house</strong><br>If it's there, it's a loaded gun.</li>
+    <li><strong>Evening activity</strong><br>Something that occupies your hands and mind.</li>
+    <li><strong>Bed early</strong><br>Sleep is medicine right now.</li>
+  </ul>
 
-<p>This is the most important exercise in this guide. Don't skip it.</p>
+  <h3>Before Sleep</h3>
+  <ul class="checklist">
+    <li><strong>Mark the day complete</strong><br>You did it. Another day.</li>
+    <li><strong>Acknowledge one thing you did right</strong><br>Focus on what you survived.</li>
+  </ul>
 
-<p>When cravings hit, your brain goes offline. You can't think logically. That's why you need to write it down NOW, while you're clear.</p>
+  <h1 class="page-break">When Cravings Hit</h1>
 
-<div class="exercise">
-  <h3>Write Your "Why"</h3>
-  
-  <p>Be painfully specific. Not "I want to be healthier." Instead: "I want my daughter to trust me again" or "I want to stop the 3am shame spiral."</p>
-  
-  <p><strong>The main reason I'm doing this:</strong></p>
-  <div class="write-line"></div>
-  <div class="write-line"></div>
-  <div class="write-line"></div>
-  
-  <p><strong>What I've lost or am losing to addiction:</strong></p>
-  <div class="write-line"></div>
-  <div class="write-line"></div>
-  <div class="write-line"></div>
-  
-  <p><strong>What I want my life to look like sober:</strong></p>
-  <div class="write-line"></div>
-  <div class="write-line"></div>
-  <div class="write-line"></div>
-  
-  <p><strong>The person I'm doing this for:</strong></p>
-  <div class="write-line"></div>
-</div>
+  <p>Cravings feel like they'll last forever. They don't. The average craving peaks at 15-20 minutes, then fades. Your
+    only job is to get through those minutes.</p>
 
-<p><em>Now take a photo of this page. Set it as your phone background. Let your clear-headed self protect your future craving self.</em></p>
+  <div class="emergency-box">
+    <h3>The 5-5-5 Method</h3>
+    <p><strong>5 Deep Breaths</strong><br>In for 4 counts. Hold for 4. Out for 6. Repeat 5 times.</p>
+    <p><strong>5 Things You Can See</strong><br>Name them out loud. "I see a lamp. I see my keys." This grounds you.</p>
+    <p><strong>5 Minutes</strong><br>Set a timer. Just get through 5 minutes. Then set it again if needed.</p>
+  </div>
 
-<h1 class="page-break">Your Environment Checklist</h1>
+  <h3>Physical Interrupts</h3>
+  <ul>
+    <li><strong>Ice cube on your wrist or neck</strong> — cold interrupts the craving signal</li>
+    <li><strong>Cold water on your face</strong> — activates the dive reflex</li>
+    <li><strong>Walk around the block</strong> — change your environment</li>
+    <li><strong>Call someone</strong> — not text, actually hear a voice</li>
+    <li><strong>Eat something</strong> — cravings often mask hunger</li>
+  </ul>
 
-<p>Your environment is either working for you or against you. Let's fix it.</p>
+  <h3>Mental Interrupts</h3>
+  <ul>
+    <li><strong>Play the tape forward</strong> — Imagine tomorrow's hangover. The shame. Play the whole movie.</li>
+    <li><strong>Read your "why" list</strong> — This is why you wrote it down.</li>
+    <li><strong>Watch a recovery video</strong> — Let someone else's voice drown out the craving.</li>
+  </ul>
 
-<h3>Remove</h3>
-<ul class="checklist">
-  <li><strong>All substances from your home</strong> — Every bottle, pill, stash. All of it. Give it away, flush it, dispose of it safely.</li>
-  <li><strong>Hidden stashes</strong> — You know where they are. Get them all.</li>
-  <li><strong>Paraphernalia</strong> — Pipes, papers, bottles, shot glasses — anything associated with using.</li>
-  <li><strong>Delivery apps and dealer contacts</strong> — Delete apps. Delete or block numbers. Add friction.</li>
-  <li><strong>Using buddies' numbers (temporary)</strong> — Archive the conversations for 30 days.</li>
-</ul>
+  <div class="callout">
+    <strong>The Craving Truth:</strong> This feeling will pass. It always does. No one has ever regretted waking up
+    clean and sober.
+  </div>
 
-<h3>Add</h3>
-<ul class="checklist">
-  <li><strong>Sparkling water / NA drinks / alternatives</strong> — Fill the fridge with options.</li>
-  <li><strong>Comfort snacks</strong> — Cravings often mask hunger.</li>
-  <li><strong>One sober person's number in favorites</strong> — Someone you can call at 2am.</li>
-  <li><strong>Journal or notes app</strong> — Somewhere to put your feelings.</li>
-</ul>
+  <h1 class="page-break">The "Why" Exercise</h1>
 
-<h3>Avoid (First 30 Days)</h3>
-<ul class="checklist">
-  <li>Bars, parties, or places where you used</li>
-  <li>People who use or pressure you</li>
-  <li>Situations that were triggers</li>
-  <li>Unstructured alone time</li>
-</ul>
+  <p>This is the most important exercise in this guide. Don't skip it.</p>
 
-<h1 class="page-break">Who To Tell (And How)</h1>
+  <p>When cravings hit, your brain goes offline. You can't think logically. That's why you need to write it down NOW,
+    while you're clear.</p>
 
-<p>You need at least ONE person who knows what you're doing. Not for accountability — for survival.</p>
+  <div class="exercise">
+    <h3>Write Your "Why"</h3>
 
-<h3>Who to choose:</h3>
-<ul>
-  <li>The person least likely to judge you</li>
-  <li>The person most likely to pick up the phone</li>
-  <li>NOT the person you usually use with</li>
-  <li>Someone who can keep it between you</li>
-</ul>
+    <p>Be painfully specific. Not "I want to be healthier." Instead: "I want my daughter to trust me again" or "I want
+      to stop the 3am shame spiral."</p>
 
-<h3>What to say:</h3>
-<div class="script">
-  "Hey, I wanted to tell you something. I'm getting sober. I don't know for how long yet. I'm not asking you to do anything — I just needed to tell someone. It would mean a lot if I could text you if things get hard."
-</div>
+    <p><strong>The main reason I'm doing this:</strong></p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
 
-<p>You don't owe anyone an explanation. For everyone else, just say: "I'm not using right now" or "I'm not drinking right now."</p>
+    <p><strong>What I've lost or am losing to addiction:</strong></p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
 
-<h1 class="page-break">Social Situations</h1>
+    <p><strong>What I want my life to look like sober:</strong></p>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
+    <div class="write-line"></div>
 
-<h3>What to have in your hand (for alcohol-related situations)</h3>
-<p>Always hold a drink — just not alcoholic. People stop offering when you're already holding something.</p>
-<ul>
-  <li>Sparkling water with lime (looks like a cocktail)</li>
-  <li>Ginger beer</li>
-  <li>Tonic water</li>
-  <li>Any soft drink</li>
-</ul>
+    <p><strong>The person I'm doing this for:</strong></p>
+    <div class="write-line"></div>
+  </div>
 
-<h3>What to say when asked</h3>
-<ul>
-  <li>"I'm not drinking/using right now."</li>
-  <li>"I'm driving."</li>
-  <li>"I'm on a health kick."</li>
-  <li>"I'm on medication." (Shuts down follow-ups)</li>
-  <li>"I just feel better without it."</li>
-</ul>
+  <p><em>Now take a photo of this page. Set it as your phone background. Let your clear-headed self protect your future
+      craving self.</em></p>
 
-<h3>Exit strategies</h3>
-<ul>
-  <li><strong>Drive yourself</strong> — Never depend on others for your exit.</li>
-  <li><strong>Set a time limit</strong> — Decide beforehand: "I'm leaving at 9pm."</li>
-  <li><strong>Have a buddy</strong> — Text code to a friend: "SOS" = call me with an emergency.</li>
-  <li><strong>Irish exit is acceptable</strong> — You can just leave.</li>
-  <li><strong>Avoid triggering situations entirely</strong> — It's okay to say no to events in early recovery.</li>
-</ul>
+  <h1 class="page-break">Your Environment Checklist</h1>
 
-<h1 class="page-break">Resources</h1>
+  <p>Your environment is either working for you or against you. Let's fix it.</p>
 
-<h3>Free Support Groups</h3>
-<ul>
-  <li><strong>Alcoholics Anonymous</strong> — aa.org — meetings in-person and online 24/7</li>
-  <li><strong>SMART Recovery</strong> — smartrecovery.org — science-based, no "higher power"</li>
-  <li><strong>Recovery Dharma</strong> — recoverydharma.org — Buddhist-inspired, meditation-based</li>
-  <li><strong>r/stopdrinking</strong> — reddit.com/r/stopdrinking — 900k+ member community</li>
-</ul>
+  <h3>Remove</h3>
+  <ul class="checklist">
+    <li><strong>All substances from your home</strong> — Every bottle, pill, stash. All of it. Give it away, flush it,
+      dispose of it safely.</li>
+    <li><strong>Hidden stashes</strong> — You know where they are. Get them all.</li>
+    <li><strong>Paraphernalia</strong> — Pipes, papers, bottles, shot glasses — anything associated with using.</li>
+    <li><strong>Delivery apps and dealer contacts</strong> — Delete apps. Delete or block numbers. Add friction.</li>
+    <li><strong>Using buddies' numbers (temporary)</strong> — Archive the conversations for 30 days.</li>
+  </ul>
 
-<h3>Apps</h3>
-<ul>
-  <li><strong>I Am Sober</strong> — Day counter + community</li>
-  <li><strong>Reframe</strong> — Science-based program</li>
-</ul>
+  <h3>Add</h3>
+  <ul class="checklist">
+    <li><strong>Sparkling water / NA drinks / alternatives</strong> — Fill the fridge with options.</li>
+    <li><strong>Comfort snacks</strong> — Cravings often mask hunger.</li>
+    <li><strong>One sober person's number in favorites</strong> — Someone you can call at 2am.</li>
+    <li><strong>Journal or notes app</strong> — Somewhere to put your feelings.</li>
+  </ul>
 
-<h3>Books</h3>
-<ul>
-  <li><em>This Naked Mind</em> — Annie Grace</li>
-  <li><em>Quit Like a Woman</em> — Holly Whitaker</li>
-  <li><em>Alcohol Explained</em> — William Porter</li>
-</ul>
+  <h3>Avoid (First 30 Days)</h3>
+  <ul class="checklist">
+    <li>Bars, parties, or places where you used</li>
+    <li>People who use or pressure you</li>
+    <li>Situations that were triggers</li>
+    <li>Unstructured alone time</li>
+  </ul>
 
-<div class="warning">
-  <strong>SAMHSA National Helpline:</strong> 1-800-662-4357<br>
-  Free, confidential, 24/7 treatment referral service.
-</div>
+  <h1 class="page-break">Who To Tell (And How)</h1>
 
-<h1 class="page-break">Letter To Your Future Self</h1>
+  <p>You need at least ONE person who knows what you're doing. Not for accountability — for survival.</p>
 
-<p>Write this now. Read it on Day 30.</p>
+  <h3>Who to choose:</h3>
+  <ul>
+    <li>The person least likely to judge you</li>
+    <li>The person most likely to pick up the phone</li>
+    <li>NOT the person you usually use with</li>
+    <li>Someone who can keep it between you</li>
+  </ul>
 
-<div class="exercise" style="padding: 15px;">
-  <p style="margin-bottom: 8px;"><strong>Dear Future Me,</strong></p>
-  
-  <p style="margin-bottom: 4px;">Today is Day _____ and I'm writing this because:</p>
-  <div class="write-line" style="height: 24px;"></div>
-  <div class="write-line" style="height: 24px;"></div>
-  
-  <p style="margin-bottom: 4px;">Right now I'm feeling:</p>
-  <div class="write-line" style="height: 24px;"></div>
-  <div class="write-line" style="height: 24px;"></div>
-  
-  <p style="margin-bottom: 4px;">The hardest part so far has been:</p>
-  <div class="write-line" style="height: 24px;"></div>
-  <div class="write-line" style="height: 24px;"></div>
-  
-  <p style="margin-bottom: 4px;">What I want you to remember if you're struggling:</p>
-  <div class="write-line" style="height: 24px;"></div>
-  <div class="write-line" style="height: 24px;"></div>
-  
-  <p style="margin-bottom: 4px;">What I hope is different when you read this:</p>
-  <div class="write-line" style="height: 24px;"></div>
-  <div class="write-line" style="height: 24px;"></div>
-  
-  <p style="margin-top: 12px; margin-bottom: 0;"><em>You've got this. I believe in you.</em> — Me (Day _____)</p>
-</div>
+  <h3>What to say:</h3>
+  <div class="script">
+    "Hey, I wanted to tell you something. I'm getting sober. I don't know for how long yet. I'm not asking you to do
+    anything — I just needed to tell someone. It would mean a lot if I could text you if things get hard."
+  </div>
 
-<h1 class="page-break">Day 30: What's Next</h1>
+  <p>You don't owe anyone an explanation. For everyone else, just say: "I'm not using right now" or "I'm not drinking
+    right now."</p>
 
-<p>If you're reading this on Day 30 — take a moment.</p>
+  <h1 class="page-break">Social Situations</h1>
 
-<p>You did something most people never do. You looked at a hard thing and you did it anyway. That's not nothing. That's everything.</p>
+  <h3>What to have in your hand (for alcohol-related situations)</h3>
+  <p>Always hold a drink — just not alcoholic. People stop offering when you're already holding something.</p>
+  <ul>
+    <li>Sparkling water with lime (looks like a cocktail)</li>
+    <li>Ginger beer</li>
+    <li>Tonic water</li>
+    <li>Any soft drink</li>
+  </ul>
 
-<h3>What you've accomplished:</h3>
-<ul>
-  <li>Your body has begun to heal</li>
-  <li>Your brain is recalibrating</li>
-  <li>You've proven you can do hard things</li>
-  <li>You've learned your triggers</li>
-  <li>You've built new patterns</li>
-  <li>You've survived every craving</li>
-</ul>
+  <h3>What to say when asked</h3>
+  <ul>
+    <li>"I'm not drinking/using right now."</li>
+    <li>"I'm driving."</li>
+    <li>"I'm on a health kick."</li>
+    <li>"I'm on medication." (Shuts down follow-ups)</li>
+    <li>"I just feel better without it."</li>
+  </ul>
 
-<h3>If you stumbled:</h3>
-<p>A slip is not a failure. It's data. Every Day 1 is a victory — it means you haven't given up.</p>
+  <h3>Exit strategies</h3>
+  <ul>
+    <li><strong>Drive yourself</strong> — Never depend on others for your exit.</li>
+    <li><strong>Set a time limit</strong> — Decide beforehand: "I'm leaving at 9pm."</li>
+    <li><strong>Have a buddy</strong> — Text code to a friend: "SOS" = call me with an emergency.</li>
+    <li><strong>Irish exit is acceptable</strong> — You can just leave.</li>
+    <li><strong>Avoid triggering situations entirely</strong> — It's okay to say no to events in early recovery.</li>
+  </ul>
 
-<div class="callout">
-  <h3>Want More Support?</h3>
-  <p><strong>The Sobriety Formula ($17)</strong> — Everything I've learned in 20 years, distilled into 7 pillars that actually work.</p>
-  <p><strong>The Sobriety Formula Community ($49/mo)</strong> — Weekly live coaching, daily check-ins, and people who get it.</p>
-  <p>→ sobrietyformula.com</p>
-</div>
+  <h1 class="page-break">Resources</h1>
 
-<div class="footer" style="margin-top: 20px; padding-top: 10px;">
-  <p style="margin: 0;"><strong>Leif Holtzman</strong> | Sober since 2004</p>
-  <p style="margin: 4px 0;">sobrietyformula.com | @sobrietyformula</p>
-  <p style="margin: 4px 0;">© 2025 Sobriety Formula. All rights reserved.</p>
-</div>
+  <h3>Free Support Groups</h3>
+  <ul>
+    <li><strong>Alcoholics Anonymous</strong> — aa.org — meetings in-person and online 24/7</li>
+    <li><strong>SMART Recovery</strong> — smartrecovery.org — science-based, no "higher power"</li>
+    <li><strong>Recovery Dharma</strong> — recoverydharma.org — Buddhist-inspired, meditation-based</li>
+    <li><strong>r/stopdrinking</strong> — reddit.com/r/stopdrinking — 900k+ member community</li>
+  </ul>
+
+  <h3>Apps</h3>
+  <ul>
+    <li><strong>I Am Sober</strong> — Day counter + community</li>
+    <li><strong>Reframe</strong> — Science-based program</li>
+  </ul>
+
+  <h3>Books</h3>
+  <ul>
+    <li><em>This Naked Mind</em> — Annie Grace</li>
+    <li><em>Quit Like a Woman</em> — Holly Whitaker</li>
+    <li><em>Alcohol Explained</em> — William Porter</li>
+  </ul>
+
+  <div class="warning">
+    <strong>SAMHSA National Helpline:</strong> 1-800-662-4357<br>
+    Free, confidential, 24/7 treatment referral service.
+  </div>
+
+  <h1 class="page-break">Letter To Your Future Self</h1>
+
+  <p>Write this now. Read it on Day 30.</p>
+
+  <div class="exercise" style="padding: 15px;">
+    <p style="margin-bottom: 8px;"><strong>Dear Future Me,</strong></p>
+
+    <p style="margin-bottom: 4px;">Today is Day _____ and I'm writing this because:</p>
+    <div class="write-line" style="height: 24px;"></div>
+    <div class="write-line" style="height: 24px;"></div>
+
+    <p style="margin-bottom: 4px;">Right now I'm feeling:</p>
+    <div class="write-line" style="height: 24px;"></div>
+    <div class="write-line" style="height: 24px;"></div>
+
+    <p style="margin-bottom: 4px;">The hardest part so far has been:</p>
+    <div class="write-line" style="height: 24px;"></div>
+    <div class="write-line" style="height: 24px;"></div>
+
+    <p style="margin-bottom: 4px;">What I want you to remember if you're struggling:</p>
+    <div class="write-line" style="height: 24px;"></div>
+    <div class="write-line" style="height: 24px;"></div>
+
+    <p style="margin-bottom: 4px;">What I hope is different when you read this:</p>
+    <div class="write-line" style="height: 24px;"></div>
+    <div class="write-line" style="height: 24px;"></div>
+
+    <p style="margin-top: 12px; margin-bottom: 0;"><em>You've got this. I believe in you.</em> — Me (Day _____)</p>
+  </div>
+
+  <h1 class="page-break">Day 30: What's Next</h1>
+
+  <p>If you're reading this on Day 30 — take a moment.</p>
+
+  <p>You did something most people never do. You looked at a hard thing and you did it anyway. That's not nothing.
+    That's everything.</p>
+
+  <h3>What you've accomplished:</h3>
+  <ul>
+    <li>Your body has begun to heal</li>
+    <li>Your brain is recalibrating</li>
+    <li>You've proven you can do hard things</li>
+    <li>You've learned your triggers</li>
+    <li>You've built new patterns</li>
+    <li>You've survived every craving</li>
+  </ul>
+
+  <h3>If you stumbled:</h3>
+  <p>A slip is not a failure. It's data. Every Day 1 is a victory — it means you haven't given up.</p>
+
+  <div class="callout">
+    <h3>Want More Support?</h3>
+    <p><strong>The Sobriety Formula ($17)</strong> — Everything I've learned in 20 years, distilled into 7 pillars that
+      actually work.</p>
+    <p><strong>The Sobriety Formula Community ($49/mo)</strong> — Weekly live coaching, daily check-ins, and people who
+      get it.</p>
+    <p>→ <a href="https://sobrietyformula.info">sobrietyformula.info</a></p>
+  </div>
+
+  <div class="footer" style="margin-top: 20px; padding-top: 10px;">
+    <p style="margin: 0;"><strong>Leif Holtzman</strong> | Sober since 2004</p>
+    <p style="margin: 4px 0;"><a href="https://sobrietyformula.info">sobrietyformula.info</a></p>
+    <p style="margin: 4px 0;">© 2025 Sobriety Formula. All rights reserved.</p>
+  </div>
 
 </body>
+
 </html>
